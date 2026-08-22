@@ -1,0 +1,170 @@
+* {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+:not(button, input[type=submit]) {
+    border-width: 0px;
+}
+
+button, input[type=submit] {
+    border: 2px solid black;
+}
+
+main.centralizar-vertical {
+    gap: 1.5em;
+}
+
+.block-container {
+    box-shadow: 1em 0.6em #00000022;
+}
+
+.titulo {
+    margin-bottom: 0px;
+}
+
+.container-entrada {
+    display: grid;
+    grid-template-columns:
+        [descricao] 1fr
+        [data] 1fr
+        [hora] 1fr
+        [botao-adicionar] 1fr;
+    grid-template-rows:
+        [descricao] 1.5fr
+        [informacoes] 1fr;
+    gap: 0.8em;
+    background-color: lightblue;
+    width: 700px;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+#js-entrada {
+    width: auto;
+    grid-column: span 3;
+}
+
+
+.centralizar-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+}
+
+.centralizar-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.container-tarefas {
+    width: 700px;
+    box-sizing: border-box;
+    padding: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.titulo-container {
+    margin: 0px;
+    padding: 0.3em 0.5em;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#container-afazeres {
+    background-color: khaki;
+}
+
+#container-feitos {
+    background-color: lightgreen;
+}
+
+
+.lista-tarefas {
+    display: grid;
+    align-items: start;
+    padding: 0px;
+    gap: 0.1em;
+    margin: 0px;
+    width: 100%;
+}
+
+
+.linha-tarefa {
+    display: grid;
+    grid-template-columns:
+        [tempo] 3fr
+        [botao-caixa] 1fr
+        [descricao] 15fr
+        [botao-excluir] 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.5em;
+    box-sizing: border-box;
+    padding: 0.2em 0.5em;
+}
+
+
+.linha-tarefa:hover {
+    background-color: cornflowerblue;
+}
+
+.linha-tarefa-a-deletar:hover {
+    background-color: salmon;
+}
+
+
+.tarefa-botao-caixa {
+    display: inline;   
+}
+
+
+.tarefa-botao-excluir {
+    display: inline;
+}
+
+
+.tarefa-conteudo {
+    display: inline;
+    justify-self: left;
+    margin: 0px;
+    max-width: 500px;
+    max-height: 200px;
+    overflow: scroll;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+}
+
+.tarefa-container-tempo {
+    display: flex;
+    flex-direction: column ;
+    justify-self: left;
+}
+
+.tarefa-tempo-termino {
+    font-family: monospace;
+    display: inline;
+    margin: 0px;
+    overflow-wrap: break-word;
+}
+
+.aviso {
+    justify-self: left;
+    font-size: small;
+    padding: 0.2em 1em;
+    opacity: 0.5;
+}
+
+body {
+  background-image: url('./background.png');
+  background-size: 100vw;
+  background-repeat: repeat-y;
+  z-index: -1;
+}

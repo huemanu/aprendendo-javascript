@@ -1,0 +1,67 @@
+* {
+    font-family: "IBM Plex Sans Regular", sans-serif;
+}
+
+:root {
+    --cor-duelo: gray;
+    --cor-duelo-vitoria: lightgreen;
+    --cor-duelo-empate: khaki;
+    --cor-duelo-derrota: darksalmon;
+}
+
+p {
+    align-items: center;
+}
+
+button {
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 5px;
+    border-width: 0px;
+}
+
+button:hover {
+    background-color: cornflowerblue;
+}
+
+button.escolha {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.center-container {
+    display: flex;
+    align-items: center;
+}
+
+.container-vertical {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-horizontal {
+    flex-direction: row;
+    gap: 10px;
+}
+
+.escolha-icone {
+    font-size: 80px;
+    margin: 5px;
+}
+
+.display-escolha-duelo {
+    background-color: var(--cor-duelo);
+    border-radius: 10px;
+    padding: 10px 30px 20px;
+    gap: 5px;
+}
+
+.display-espaco-duelo {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: 100%;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel, Tesoura</title>
+    <link rel="stylesheet" href="pedra_papel_tesoura.css">
+    <script src="pedra_papel_tesoura.js"></script>
+</head>
+<body onload="iniciar();">
+
+    <div class="center-container container-vertical">
+        <h1>Jogo de Pedra, Papel ou Tesoura</h1>
+        <p>Escolha uma das opções:</p>
+
+        <div class="center-container container-horizontal">
+            <button onclick="playerEscolherPedra()" class="escolha escolha-pedra">
+                <p class="escolha-icone">🪨</p>
+                <p>Pedra</p>
+            </button>
+            <button onclick="playerEscolherPapel()" class="escolha escolha-papel">
+                <p class="escolha-icone">🧻</p>
+                <p>Papel</p>
+            </button>
+            <button onclick="playerEscolherTesoura()" class="escolha escolha-tesoura">
+                <p class="escolha-icone">✂️</p>
+                <p>Tesoura</p>
+            </button>
+        </div>
+
+        <div id="js-display-aviso" class="center-container">
+            <p>Ainda não houve nenhum jogo</p>
+        </div>
+
+        <div id="js-display-escolha-duelo" class="display-escolha-duelo center-container container-vertical">
+            <div id="js-display-ultimo-resultado" class="center-container">
+            </div>
+            <div id="js-display-espaco-duelo" class="display-espaco-duelo center-container container-horizontal">
+                <div id="js-escolha-player" class="center-container container-vertical">
+                    <div id="js-escolha-player-icone" class="escolha-icone">
+                    </div>
+                    <div id="js-escolha-player-descricao">
+                        Player
+                    </div>
+                </div>
+                <p>VS.</p>
+                <div id="js-escolha-computador" class="center-container container-vertical">
+                    <div id="js-escolha-computador-icone" class="escolha-icone">
+                    </div>
+                    <div id="js-escolha-computador-descricao">
+                        Computador
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="js-display-historico">
+
+        </div>
+
+        <br>
+
+        <button onclick="resetarPontuacao();">
+            Resetar
+        </button>
+    </div>
+
+</body>
+</html>

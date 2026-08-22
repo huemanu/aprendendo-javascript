@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Afazeres</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="afazeres.js" defer></script>
+</head>
+<body>
+    <main class="centralizar-vertical">
+        <div class="background">
+
+        </div>
+        <h1 class="titulo">Lista de Afazeres</h1>
+
+        <p>
+            Esse site não armazena suas tarefa na nuvem, então, se você fechar essa página, <i>já era</i> &mdash; suas informações se perderam!
+        </p>
+
+        <div class="container-entrada block-container">
+            <input type="text" id="js-entrada" placeholder="Escreva uma tarefa"
+                onkeydown="gerirEnterEntrada(event)">
+            <input type="submit" name="submit" id="js-submit" onclick="criarTarefa()" value="Adicionar">
+            <input type="date" name="entrada-data" id="js-entrada-data">
+            <input type="time" name="entrada-hora" id="js-entrada-hora">
+        </div>
+
+        <div id="container-afazeres" class="container-tarefas block-container">
+            <h2 class="titulo-container">Afazeres</h2>
+            <ul id="container-lista-afazeres" class="lista-tarefas">
+                <li class="tarefa">Criar tarefas</li>
+            </ul>
+        </div>
+
+        <div id="container-feitos" class="container-tarefas block-container">
+            <h2 class="titulo-container">Feitos</h2>
+            <ul id="container-lista-feitos" class="lista-tarefas">
+                <li class="tarefa">Abrir esse site</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
