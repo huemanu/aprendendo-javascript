@@ -1,0 +1,447 @@
+:root {
+    --gray1: rgb(17, 17, 17);
+    --gray2: rgb(156, 164, 161);
+    --gray3: rgb(175, 195, 197);
+    --gray-trans-1: rgba(54, 51, 54, 0.75);
+    --gray-trans-2: rgba(99, 91, 104, 0.5);
+    --gray-trans-3: rgba(131, 140, 154, 0.25);
+    --red: #d0243c;
+    --blue: #1966b4;
+    color: rgb(213, 220, 220);
+    background-color: var(--gray1);
+
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+
+    --shadow: var(--shadow);
+    --album-showcase-width: 400px;
+}
+
+html,
+body,
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background: url("./images/background.png");
+    background-size: 100vw;
+}
+
+.title,
+.logotype {
+    font-family: "Emblema One", system-ui;
+    font-weight: 400;
+}
+
+
+.all {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 4em;
+    width: 100%;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.topbar,
+.bottombar {
+    width: 100%;
+    height: 5%;
+    background-color: var(--gray-trans-1);
+    background-color: var(--gray1);
+}
+
+.topbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: solid 2px var(--gray-trans-3);
+    position: fixed;
+    padding: 0px 0px 0.5em;
+    height: 2.5em;
+    z-index: 10;
+}
+
+.topbar-info {
+    display: flex;
+    align-items: baseline;
+    padding: 0px 0px 0.5em;
+    height: 100%;
+}
+
+.topbar-ad {
+    display: flex;
+    align-items: baseline;
+    padding: 0px 0px 0.5em;
+    margin-right: 0.5em;
+    height: 100%;
+}
+
+@keyframes achou {
+    0% {
+        opacity: 0.0;
+    }
+
+    50% {
+        opacity: 1.0;
+    }
+
+    100% {
+        opacity: 0.0;
+    }
+}
+
+.topbar-ad * {
+    animation-name: achou;
+    animation-duration: 20s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+
+.logotype-space {
+    padding: .25em 0.5em;
+}
+
+.pre-slogan-space {
+    padding: .25em 0.25em;
+}
+
+.slogan-space {
+    padding: .25em 0.25em;
+}
+
+.just-horizontal-space {
+    width: 2em;
+}
+
+.gizz-ad-space {
+    height: 80%;
+    padding: 0.1em;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5em;
+    text-wrap: nowrap;
+    margin-right: auto;
+}
+
+
+.logotype {
+    text-transform: uppercase;
+    font-size: xx-large;
+    text-wrap: nowrap;
+}
+
+.logotype-letter {
+    margin: 0px -0.5em 0px 0px;
+    padding: 0px;
+    font-style: normal;
+}
+
+.pre-slogan {
+    color: var(--blue);
+    font-size: large;
+}
+
+.slogan {
+    color: var(--red);
+    font-family: "Sedgwick Ave Display", cursive;
+    font-weight: 200;
+    text-wrap: nowrap;
+    font-size: large;
+}
+
+.gizz-ad {
+    height: 100%;
+    display: inline-block;
+}
+
+
+
+.bottombar {
+    font-size: small;
+    margin: 0px;
+    border-top: solid 2px var(--gray-trans-3);
+}
+
+.all-rights {
+    font-style: italic;
+    margin: 1em;
+    color: var(--gray3);
+}
+
+
+
+
+.content {
+    width: 56%;
+    padding: 1em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    background: linear-gradient(135deg, var(--gray-trans-1), var(--gray-trans-2));
+    backdrop-filter: blur(15px);
+    box-shadow: .5em .5em .5em .5em var(--shadow);
+    border: solid 2px var(--gray-trans-3);
+
+    border: solid 1px var(--gray-trans-3);
+    border-radius: .5em;
+}
+
+.text {
+    color: white;
+}
+
+.woo {
+    color: white;
+    font-weight: 200;
+    font-size: large;
+    font-family: "Sedgwick Ave Display", cursive;
+
+}
+
+.form-list {
+    margin: 0px;
+    padding: 0px;
+}
+
+li.form-item {
+    margin: 0.5em 0px 0px;
+    padding: 0.5em;
+    list-style-position: inside;
+    background-color: var(--gray-trans-1);
+    border: solid 1px var(--gray-trans-3);
+}
+
+
+li.form-item:first-child {
+    margin: 0em 0px 0px;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+}
+
+li.form-item:last-child {
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+}
+
+li.form-item::marker {
+    color: var(--blue);
+}
+
+.option-text {
+    display: inline-block;
+    color: var(--gray2);
+}
+
+
+input:not([type=file]) {
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--gray1);
+    background-color: var(--gray3);
+    border-radius: 2px;
+    border: solid 1px white;
+}
+
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=email] {
+    width: calc(100% - 1em);
+    background-color: var(--gray3);
+    border-radius: 2px;
+}
+
+input[type=date] {
+    width: auto;
+}
+
+.form-item-submit {
+    margin: 0.5em 0px 0px;
+    padding: 0.5em 0.5em 0px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type=radio]:checked,
+input[type=checkbox]:checked {
+    accent-color: var(--red);
+}
+
+input:invalid {
+    background-color: rgb(88, 82, 78);
+    border: solid 2px red;
+}
+
+input:valid {
+    border: solid 2px var(--blue);
+}
+
+
+.error {
+    font-family: "Sedgwick Ave Display", cursive;
+    color: var(--red);
+}
+
+
+/******************************************************/
+
+
+.albums-showcase {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: center;
+    justify-content: center;
+
+    --album-showcase-width: clamp(400px, 100%, 100%);
+    width: var(--album-showcase-width);
+
+    height: 100%;
+
+    margin: 0 calc((100% - var(--album-category-width)) / 2);
+
+}
+
+
+.album-item {
+    background-color: var(--gray3);
+    display: flex;
+    flex-direction: column;
+
+    width: clamp(200px, 20%, 600px);
+    min-height: 100%;
+
+    margin: 2%;
+
+    border-radius: 21px;
+
+    box-shadow: 0px 2px 5px 5px var(--palette-normal-shadow);
+
+}
+
+.album-item:not(.unreleased):hover {
+    font-weight: 800;
+    transition: font-weight 100ms ease-in;
+
+    background-color: var(--palette-highlight-light);
+    transition: background-color 100ms ease-in;
+
+    box-shadow: 0px 4px 10px 10px var(--palette-highlight-shadow);
+    transition: box-shadow 100ms ease-in;
+}
+
+
+.album-item:not(.unreleased):hover *:not(.tag) {
+
+    color: var(--palette-highlight-dark);
+    transition: color 100ms ease-in;
+}
+
+
+.unreleased {
+    background-color: var(--gray2);
+
+}
+
+.unreleased:hover {
+    font-weight: 800;
+    transition: font-weight 100ms ease-in;
+
+    background-color: var(--gray3);
+    transition: background-color 100ms ease-in;
+
+    box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 100ms ease-in;
+}
+
+
+.unreleased:hover *:not(.tag) {
+    color: var(--gray1);
+    transition: color 100ms ease-in;
+}
+
+
+img.cover {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.album-name {
+    margin: 5px 20px 5px;
+    text-align: center;
+    font-size: .9em;
+}
+
+.tag-container {
+    display: flex;
+
+    justify-self: flex-end;
+
+    margin: 5px;
+}
+
+.tag {
+    display: inline-block;
+
+    --bg-color: red;
+    background-color: var(--gray1);
+    padding: 2px 8px;
+    margin: 5px 2px;
+
+    --color: white;
+    color: var(--color);
+    font-size: x-small;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    font-size: .9em;
+}
+
+.tag:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.tag:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.tag:only-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

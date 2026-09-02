@@ -1,0 +1,79 @@
+
+* {
+    font-family: 'Tex Gyre Schola';
+}
+
+@font-face {
+  font-family: 'Tex Gyre Schola';
+  src: url('../../fonts/texgyreschola_regular_macroman/texgyreschola-regular-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/texgyreschola_regular_macroman/texgyreschola-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        /* url('../fonts/texgyreschola_regular_macroman/texgyreschola-regular-webfont.woff2') format('woff2'), */ /* Super Modern Browsers */
+       url('../../fonts/texgyreschola_regular_macroman/texgyreschola-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../../fonts/texgyreschola_regular_macroman/texgyreschola-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/texgyreschola_regular_macroman/texgyreschola-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+.centralizar-horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.centralizar-vertical {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.criar-matriz {
+    /*Algo*/
+}
+
+.criar-matriz-inputs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.4fr;
+    column-gap: 10px;
+
+}
+
+.input-criar-tabela {
+    min-width: 50px;
+    max-width: 100px;
+}
+
+.lista-igualdades-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.matriz-container {
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 10px;
+    /*corner-shape: scoop;*/
+}
+
+.linha-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr; /* FIX */
+    grid-template-rows: 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.elemento-container {
+    display: inline;
+    text-align: center;
+    min-width: 50px;
+}
